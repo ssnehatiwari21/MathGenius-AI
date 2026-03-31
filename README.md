@@ -223,7 +223,7 @@ docker-compose up -d
 
 ## 👥 Team Contributions
 
-* **Sneha Tiwari (24BCAE11287) – Backend & AI Integration**
+* **Sneha Tiwari – Backend & AI Integration**
   Developed backend services using FastAPI, implemented APIs, integrated AI logic, and managed database and system architecture.
 
 * **Diksha Mitra – Frontend Development**
