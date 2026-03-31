@@ -1,225 +1,135 @@
-# MathGenius AI - Adaptive Intelligent Tutoring System
+🎯 Overview
 
-![Status](https://img.shields.io/badge/Status-Production--Ready-green)
-![Python](https://img.shields.io/badge/Python-3.9+-blue)
-![Next.js](https://img.shields.io/badge/Next.js-14-black)
+MathGenius AI is an AI-powered adaptive math tutoring platform designed to provide personalized learning experiences. Unlike traditional systems, it not only solves problems but also adapts explanations, generates quizzes, and tracks student performance over time.
 
----
+The system combines symbolic computation, AI-generated explanations, and adaptive learning strategies to help students understand concepts rather than just memorize solutions.
 
-## 🎯 Overview
+✨ Key Features
+🧠 Intelligent Problem Solving
+Accepts natural language math queries
+Generates step-by-step solutions using symbolic computation
+Provides AI-powered explanations
+📊 Adaptive Learning System
+Adjusts difficulty based on user performance
+Tracks accuracy, response time, and improvement
+Suggests next-level problems dynamically
+Provides insights for improvement
+✍️ Math Rendering & Explanation
+LaTeX rendering using KaTeX
+Markdown-based structured explanations
+Clean step-by-step reasoning
+🎙️ Additional Features
+Speech input for problem solving
+Syntax highlighting
+Interactive UI with animations
+🏗️ Architecture
 
-MathGenius AI is an **AI-powered adaptive math tutoring platform** designed to provide personalized learning experiences. Unlike traditional systems, it not only solves problems but also adapts explanations, generates quizzes, and tracks student performance over time.
-
-The system combines **symbolic computation, AI-generated explanations, and adaptive learning strategies** to help students understand concepts rather than just memorizing solutions.
-
----
-
-## ✨ Key Features
-
-### 🧠 Intelligent Problem Solving
-
-* Accepts natural language math queries
-* Generates step-by-step solutions using symbolic computation
-* Provides AI-powered explanations
-
-### 📊 Adaptive Learning System
-
-* Adjusts difficulty based on user performance
-* Tracks accuracy, response time, and improvement
-* Suggests next-level problems dynamically
-
-👉 Adaptive learning systems continuously adjust based on student behavior and performance patterns ([Ruvimo][1])
-
----
-
-### 📝 AI-Generated Quizzes
-
-* Dynamic quiz generation based on selected topics
-* Multiple question types (MCQ, short answer, etc.)
-* Difficulty levels (easy, medium, hard)
-* Auto-evaluation with feedback
-
----
-
-### 📈 Performance Analytics Dashboard
-
-* Tracks:
-
-  * Skill score
-  * Topic-wise accuracy
-  * Learning progress over time
-* Provides insights for improvement
-
----
-
-### ✍️ Math Rendering & Explanation
-
-* LaTeX rendering using KaTeX
-* Markdown-based structured explanations
-* Clean step-by-step reasoning
-
----
-
-### 🎙️ Additional Features
-
-* Speech input for problem solving
-* Syntax highlighting for explanations
-* Interactive UI with animations
-
----
-
-## 🏗️ Architecture
-
-```
 MathGenius-AI/
 ├── backend/ (FastAPI - Python)
-│   ├── main.py
-│   ├── database.py
-│   ├── models.py
-│   ├── adaptive_engine.py
-│   ├── student_model.py
-│   ├── solver.py
-│   ├── quiz_engine.py        # NEW: Quiz generation
-│   ├── routes/
-│   │   ├── solve.py
-│   │   ├── analytics.py
-│   │   ├── quiz.py           # NEW: Quiz APIs
-│   │   └── users.py
-│   └── utils/
-│       └── llm_client.py
-│
+│ ├── main.py
+│ ├── database.py
+│ ├── models.py
+│ ├── adaptive_engine.py
+│ ├── student_model.py
+│ ├── solver.py
+│ ├── quiz_engine.py
+│ ├── routes/
+│ │ ├── solve.py
+│ │ ├── analytics.py
+│ │ ├── quiz.py
+│ │ └── users.py
+│ └── utils/
+│ └── llm_client.py
+
 └── frontend/ (Next.js)
     ├── components/
-    │   ├── ProblemSolver.tsx
-    │   ├── QuizModule.tsx        # NEW
-    │   ├── AnalyticsDashboard.tsx
-    │   └── MathDisplay.tsx
+    │ ├── ProblemSolver.tsx
+    │ ├── QuizModule.tsx
+    │ ├── AnalyticsDashboard.tsx
+    │ └── MathDisplay.tsx
     └── lib/api.ts
-```
 
----
+🚀 Tech Stack
 
-## 🚀 Tech Stack
+Frontend:
 
-### Frontend
+Next.js (React + TypeScript)
+Tailwind CSS
+Radix UI
+Recharts
+KaTeX
 
-* Next.js (React + TypeScript)
-* Tailwind CSS
-* Radix UI
-* Recharts
-* KaTeX
+Backend:
 
-### Backend
+FastAPI (Python)
+SQLAlchemy
+SymPy
+LLM Integration (Groq/OpenAI)
 
-* FastAPI (Python)
-* SQLAlchemy
-* SymPy
-* LLM Integration (Groq/OpenAI)
+Database:
 
-### Database
+SQLite
 
-* SQLite
+Tools:
 
-### Tools
-
-* Docker
-* Git
-
----
-
-## ⚙️ Setup Instructions
-
-### Backend
-
-```bash
+Docker
+Git
+⚙️ Setup Instructions
+1️⃣ Clone the Repository
+git clone https://github.com/ssnehatiwari21/MathGenius-AI.git
+cd MathGenius-AI
+2️⃣ Backend Setup
 cd backend
 pip install -r requirements.txt
-cp .env.example .env
-python main.py
-```
+Create .env file
 
----
+👉 On Windows (PowerShell):
+copy .env.example .env
+Add your API key in .env
+GROQ_API_KEY=your_api_key_here
+Run Backend Server
+uvicorn main:app --reload
 
-### Frontend
-
-```bash
+3️⃣ Frontend Setup
 cd frontend
 npm install
-cp .env.example .env.local
+Create environment file
+
+👉 Windows:
+copy .env.example .env.local
+
+Run Frontend
 npm run dev
-```
 
----
+🔧 API Endpoints
 
-## 🔧 API Endpoints
-
-### Solve Problem
-
-```
 POST /api/solve
-```
-
-### Quiz Generation
-
-```
 POST /api/quiz
-```
-
-### Analytics
-
-```
 GET /api/analytics/{user_id}
-```
 
----
+🧠 Core Modules
 
-## 🧠 Core Modules
+Adaptive Engine – adjusts difficulty and explanations
+Student Model – tracks learning progress
+Solver Engine – symbolic math solving using SymPy
+Quiz Engine – dynamic quiz generation
+LLM Client – handles AI explanations
 
-* **Adaptive Engine**
-  Adjusts difficulty and explanation depth based on performance
+📊 Learning Metrics
+Skill Score (0–100)
+Accuracy Rate
+Response Time
+Improvement Rate
+Topic-wise Breakdown
 
-* **Student Model**
-  Tracks learning progress and skill levels
+🎓 Educational Approach
+Adaptive Learning
+Mastery-Based Progression
+Immediate Feedback
+Personalized Recommendations
 
-* **Solver Engine**
-  Uses SymPy for symbolic math solving
-
-* **Quiz Engine (New)**
-  Generates adaptive quizzes dynamically
-
-* **LLM Client**
-  Handles AI-based explanations and NLP
-
----
-
-## 📊 Learning Metrics
-
-* Skill Score (0–100)
-* Accuracy Rate
-* Response Time
-* Improvement Rate
-* Topic-wise Breakdown
-
----
-
-## 🎓 Educational Approach
-
-* Adaptive Learning
-* Mastery-Based Progression
-* Immediate Feedback
-* Personalized Recommendations
-
-AI tutoring systems enhance learning by adapting explanations and providing structured guidance rather than just answers ([Scale][2])
-
----
-
-## 🚀 Deployment
-
-```bash
+🚀 Deployment
 docker-compose up -d
-```
-
----
 
 ## 👥 Team Contributions
 
@@ -240,17 +150,13 @@ docker-compose up -d
 
 ---
 
-## 📌 Future Scope
+📌 Future Scope
+Authentication system
+PostgreSQL integration
+Cloud deployment
+Advanced analytics
+Multi-language support
 
-* Authentication system
-* PostgreSQL integration
-* Cloud deployment
-* Advanced analytics
-* Multi-language support
-
----
-
-## 📜 License
-
-For educational and research purposes.
+📜 License
+This project is intended for educational and research purposes.
 
