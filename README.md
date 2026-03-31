@@ -1,6 +1,4 @@
-<div align="center">
 
-<img src="https://img.shields.io/badge/MathGenius-AI-6366f1?style=for-the-badge&logo=openai&logoColor=white" alt="MathGenius AI"/>
 
 # 🧮 MathGenius AI
 
@@ -223,11 +221,11 @@ docker-compose up -d
 
 ## 📌 Future Scope
 
-- [ ] 🔐 Authentication system
-- [ ] 🐘 PostgreSQL integration
-- [ ] ☁️ Cloud deployment
-- [ ] 📊 Advanced analytics dashboard
-- [ ] 🌍 Multi-language support
+- 🔐 Authentication system
+- 🐘 PostgreSQL integration
+- ☁️ Cloud deployment
+- 📊 Advanced analytics dashboard
+- 🌍 Multi-language support
 
 ---
 
