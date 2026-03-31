@@ -1,171 +1,244 @@
-# 🎯 Overview
+<div align="center">
 
-**MathGenius AI** is an AI-powered adaptive math tutoring platform designed to provide personalized learning experiences. Unlike traditional systems, it not only solves problems but also adapts explanations, generates quizzes, and tracks student performance over time.
+<img src="https://img.shields.io/badge/MathGenius-AI-6366f1?style=for-the-badge&logo=openai&logoColor=white" alt="MathGenius AI"/>
 
-The system combines **symbolic computation, AI-generated explanations, and adaptive learning strategies** to help students understand concepts rather than just memorize solutions.
+# 🧮 MathGenius AI
 
----
+### *AI-Powered Adaptive Math Tutoring Platform*
 
-# ✨ Key Features
+> Personalized learning that adapts to **you** — not the other way around.
 
-## 🧠 Intelligent Problem Solving
-- Accepts natural language math queries  
-- Generates step-by-step solutions using symbolic computation  
-- Provides AI-powered explanations  
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Next.js](https://img.shields.io/badge/Next.js-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)](https://typescriptlang.org/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://docker.com/)
+[![SQLite](https://img.shields.io/badge/SQLite-07405E?style=flat-square&logo=sqlite&logoColor=white)](https://sqlite.org/)
 
-## 📊 Adaptive Learning System
-- Adjusts difficulty based on user performance  
-- Tracks accuracy, response time, and improvement  
-- Suggests next-level problems dynamically  
-- Provides insights for improvement  
-
-## ✍️ Math Rendering & Explanation
-- LaTeX rendering using **KaTeX**  
-- Markdown-based structured explanations  
-- Clean step-by-step reasoning  
-
-## 🎙️ Additional Features
-- Speech input for problem solving  
-- Syntax highlighting  
-- Interactive UI with animations  
+</div>
 
 ---
 
-# 🏗️ Architecture
+## 🎯 Overview
 
+**MathGenius AI** is an intelligent, adaptive math tutoring platform that goes beyond simply solving problems. It understands *how you learn*, adjusts its approach in real-time, and helps you build genuine mathematical intuition — not just memorize solutions.
 
+Combining **symbolic computation**, **AI-generated explanations**, and **adaptive learning strategies**, MathGenius AI creates a truly personalized educational experience.
+
+---
+
+## ✨ Key Features
+
+### 🧠 Intelligent Problem Solving
+- Accepts **natural language** math queries
+- Generates **step-by-step solutions** using symbolic computation
+- Provides **AI-powered explanations** tailored to your level
+
+### 📊 Adaptive Learning System
+- **Adjusts difficulty** dynamically based on your performance
+- Tracks **accuracy**, **response time**, and **improvement trends**
+- Suggests **next-level problems** to keep you in the optimal learning zone
+- Delivers **personalized insights** for continuous growth
+
+### ✍️ Math Rendering & Explanation
+- Beautiful **LaTeX rendering** via KaTeX
+- **Markdown-based** structured explanations
+- Clean **step-by-step reasoning** for every solution
+
+### 🎙️ Additional Features
+- 🎤 **Speech input** for hands-free problem solving
+- 🎨 **Syntax highlighting** for expressions
+- ✨ **Interactive UI** with smooth animations
+
+---
+
+## 🏗️ Architecture
+
+```
 MathGenius-AI/
-├── backend/ (FastAPI - Python)
-│ ├── main.py
-│ ├── database.py
-│ ├── models.py
-│ ├── adaptive_engine.py
-│ ├── student_model.py
-│ ├── solver.py
-│ ├── quiz_engine.py
-│ ├── routes/
-│ │ ├── solve.py
-│ │ ├── analytics.py
-│ │ ├── quiz.py
-│ │ └── users.py
-│ └── utils/
-│ └── llm_client.py
-
-└── frontend/ (Next.js)
-├── components/
-│ ├── ProblemSolver.tsx
-│ ├── QuizModule.tsx
-│ ├── AnalyticsDashboard.tsx
-│ └── MathDisplay.tsx
-└── lib/api.ts
-
-
----
-
-# 🚀 Tech Stack
-
-## Frontend:
-- Next.js (React + TypeScript)  
-- Tailwind CSS  
-- Radix UI  
-- Recharts  
-- KaTeX  
-
-## Backend:
-- FastAPI (Python)  
-- SQLAlchemy  
-- SymPy  
-- LLM Integration (Groq/OpenAI)  
-
-## Database:
-- SQLite  
-
-## Tools:
-- Docker  
-- Git  
+├── backend/                    # FastAPI — Python
+│   ├── main.py
+│   ├── database.py
+│   ├── models.py
+│   ├── adaptive_engine.py      # Core adaptive logic
+│   ├── student_model.py        # Learning progress tracker
+│   ├── solver.py               # SymPy symbolic solver
+│   ├── quiz_engine.py          # Dynamic quiz generation
+│   ├── routes/
+│   │   ├── solve.py
+│   │   ├── analytics.py
+│   │   ├── quiz.py
+│   │   └── users.py
+│   └── utils/
+│       └── llm_client.py       # LLM integration layer
+│
+└── frontend/                   # Next.js
+    ├── components/
+    │   ├── ProblemSolver.tsx
+    │   ├── QuizModule.tsx
+    │   ├── AnalyticsDashboard.tsx
+    │   └── MathDisplay.tsx
+    └── lib/
+        └── api.ts
+```
 
 ---
 
-# ⚙️ Setup Instructions
+## 🚀 Tech Stack
 
-## 1️⃣ Clone the Repository
+| Layer | Technology |
+|-------|-----------|
+| **Frontend** | Next.js · React · TypeScript · Tailwind CSS |
+| **UI Components** | Radix UI · Recharts · KaTeX |
+| **Backend** | FastAPI · Python · SQLAlchemy · SymPy |
+| **AI/LLM** | Groq / OpenAI Integration |
+| **Database** | SQLite |
+| **DevOps** | Docker · Git |
 
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/ssnehatiwari21/MathGenius-AI.git
 cd MathGenius-AI
+```
 
-## 2️⃣ Backend Setup
+### 2️⃣ Backend Setup
 
+```bash
 cd backend
 pip install -r requirements.txt
-Create .env file
-👉 On Windows (PowerShell):
+```
+
+**Create your `.env` file:**
+
+```bash
+# Windows (PowerShell)
 copy .env.example .env
+```
 
-Add your API key in .env
+**Add your API key in `.env`:**
+
+```env
 GROQ_API_KEY=your_api_key_here
+```
 
-Run Backend Server:
+**Start the backend server:**
+
+```bash
 uvicorn main:app --reload
+```
 
-## 3️⃣ Frontend Setup
+### 3️⃣ Frontend Setup
+
+```bash
 cd frontend
 npm install
+```
 
-Create environment file
-👉 Windows:
+**Create environment file:**
+
+```bash
+# Windows (PowerShell)
 copy .env.example .env.local
+```
 
-Run Frontend:
+**Start the frontend:**
+
+```bash
 npm run dev
+```
 
-#🔧 API Endpoints
-POST /api/solve
-POST /api/quiz
-GET /api/analytics/{user_id}
+---
 
-#🧠 Core Modules
-Adaptive Engine – adjusts difficulty and explanations
-Student Model – tracks learning progress
-Solver Engine – symbolic math solving using SymPy
-Quiz Engine – dynamic quiz generation
-LLM Client – handles AI explanations
+## 🔧 API Endpoints
 
-#📊 Learning Metrics
-Skill Score (0–100)
-Accuracy Rate
-Response Time
-Improvement Rate
-Topic-wise Breakdown
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | `/api/solve` | Submit a math problem for solving |
+| `POST` | `/api/quiz` | Generate an adaptive quiz |
+| `GET` | `/api/analytics/{user_id}` | Fetch student performance analytics |
 
-#🎓 Educational Approach
-Adaptive Learning
-Mastery-Based Progression
-Immediate Feedback
-Personalized Recommendations
+---
 
-#🚀 Deployment
+## 🧠 Core Modules
+
+| Module | Role |
+|--------|------|
+| **Adaptive Engine** | Adjusts difficulty and explanation style in real-time |
+| **Student Model** | Tracks and models individual learning progress |
+| **Solver Engine** | Symbolic math solving powered by SymPy |
+| **Quiz Engine** | Generates dynamic, personalized quizzes |
+| **LLM Client** | Bridges AI explanations with math solutions |
+
+---
+
+## 📊 Learning Metrics
+
+MathGenius AI tracks a rich set of learning signals:
+
+```
+📈 Skill Score          (0 – 100)
+✅ Accuracy Rate
+⏱️  Response Time
+🚀 Improvement Rate
+📚 Topic-wise Breakdown
+```
+
+---
+
+## 🎓 Educational Approach
+
+MathGenius AI is grounded in proven learning science:
+
+- **🔄 Adaptive Learning** — Problems evolve with your skill level
+- **🏆 Mastery-Based Progression** — Advance only when you're ready
+- **⚡ Immediate Feedback** — Know what went wrong, and why, instantly
+- **🎯 Personalized Recommendations** — Targeted practice where you need it most
+
+---
+
+## 🚀 Deployment
+
+```bash
 docker-compose up -d
+```
 
-#👥 Team Contributions
-Sneha Tiwari – Backend & AI Integration
-Developed backend services using FastAPI, implemented APIs, integrated AI logic, and managed database and system architecture.
-Diksha Mitra – Frontend Development
-Designed and implemented UI using Next.js, Tailwind CSS, and integrated APIs.
-Hima Agarwal – API Integration
-Connected frontend with backend services and handled data flow.
-Arpita – AI Output & Rendering
-Worked on formatting AI responses using Markdown and KaTeX.
-Pragya Pandey – Testing & Deployment
-Performed testing, debugging, environment setup, and documentation.
+---
 
-#📌 Future Scope
-Authentication system
-PostgreSQL integration
-Cloud deployment
-Advanced analytics
-Multi-language support
+## 👥 Team
 
-#📜 License
+| Member | Role |
+|--------|------|
+| **Sneha Tiwari** | Backend & AI Integration — FastAPI services, APIs, AI logic, database & system architecture |
+| **Diksha Mitra** | Frontend Development — UI design with Next.js, Tailwind CSS & API integration |
+| **Hima Agarwal** | API Integration — Frontend–backend connectivity & data flow |
+| **Arpita** | AI Output & Rendering — Markdown and KaTeX formatting of AI responses |
+| **Pragya Pandey** | Testing & Deployment — QA, debugging, environment setup & documentation |
 
-This project is intended for educational and research purposes.
+---
 
+## 📌 Future Scope
+
+- [ ] 🔐 Authentication system
+- [ ] 🐘 PostgreSQL integration
+- [ ] ☁️ Cloud deployment
+- [ ] 📊 Advanced analytics dashboard
+- [ ] 🌍 Multi-language support
+
+---
+
+## 📜 License
+
+This project is intended for **educational and research purposes**.
+
+---
+
+<div align="center">
+
+Made with ❤️ by the MathGenius AI Team
+
+</div>
