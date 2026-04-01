@@ -115,7 +115,7 @@ MathGenius-AI/
 
 ### 🔹 AI Integration
 
-* Gemini API / OpenAI / Groq
+* Groq
 
 ### 🔹 Database
 
